@@ -78,16 +78,17 @@ const Catalog = () => {
       <Container>
         <div className="mt-10 mb-32 flex flex-col-reverse gap-20 space-y-6 xl:grid xl:grid-cols-6 xl:space-y-0">
           <div className="space-y-8 xl:col-span-4">
-            <div className="gap-10 space-y-4 md:grid md:grid-cols-2 md:space-y-0 xl:grid-cols-3">
+            <div className="gap-10 space-y-4 md:grid md:grid-cols-2 md:space-y-0 xl:grid-cols-3 items-stretch">
               {index === 0 &&
-                Array.from({ length: 10 }).map((_, i) => (
+                Array.from({ length: 25 }).map((_, i) => (
                   <div key={i}>
-                    <div>
+                    <div className="h-full">
                       <Image
-                        src={`/images/Janastic/Untitled-1-${i === 9 ? `10` : `0${i + 1}`}.jpg`}
+                        src={`/images/cong_trinh/1-${i > 8 ? `${i + 1}.png` : `0${i + 1}.png`}`}
                         width={400}
                         height={400}
                         alt="Janastic"
+                        className='h-full w-full object-cover'
                       />
                     </div>
                   </div>
@@ -131,13 +132,28 @@ const Catalog = () => {
                     </div>
                   </div>
                 ))}
+
+              {index === 4 &&
+                Array.from({ length: 6 }).map((_, i) => (
+                  <div key={i}>
+                    <div className="h-full">
+                      <Image
+                        src={`/images/IGUS/sp-0${i + 1}.png`}
+                        width={400}
+                        height={400}
+                        alt="Janastic"
+                        className='h-full w-full object-cover'
+                      />
+                    </div>
+                  </div>
+                ))}
             </div>
           </div>
           <div className="h-fit rounded-2xl rounded-br-[80px] bg-white p-[24px_40px_32px_24px] md:mr-auto xl:col-span-2 xl:ml-auto xl:w-[86%]">
             <p className="font-semibold uppercase">Danh mục sản phẩm hãng sản xuất</p>
             <div className="bg-primary-blue my-4 h-px w-full" />
             <div className="space-y-8 pt-6">
-              {Array.from({ length: 4 }).map((_, i) => (
+              {Array.from({ length: 5 }).map((_, i) => (
                 <div
                   key={i}
                   className={cn('cursor-pointer border border-transparent p-2', {

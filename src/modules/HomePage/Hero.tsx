@@ -19,7 +19,7 @@ const Hero = () => {
         // grabCursor={true}
         effect={'creative'}
         loop
-        autoplay
+        // autoplay
         creativeEffect={{
           prev: {
             shadow: true,
