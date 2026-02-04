@@ -421,6 +421,9 @@ export const meihe = [
   },
 ]
 
+
+
+
 const PoweredByTech = () => {
   const router = useRouter()
   const searchParams = useSearchParams()
@@ -442,9 +445,9 @@ const PoweredByTech = () => {
     <section id="powered">
       <Container>
         <div className="mt-10 mb-32 ml-auto w-fit">
-          <svg width={237} height={70} viewBox="0 0 237 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+          {/* <svg width={237} height={70} viewBox="0 0 237 70" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0.899902 0.699951H236.1V70L0.899902 0.699951Z" fill="#F6921E" />
-          </svg>
+          </svg> */}
         </div>
 
         <div className="text-right">
@@ -457,8 +460,8 @@ const PoweredByTech = () => {
         </div>
 
         <div className="space-y-10">
-          <div className="border-primary-blue mt-8 grid place-items-center gap-x-4 gap-y-8 border-b pb-4 md:grid-cols-2 md:place-items-start lg:grid-cols-4">
-            {Array.from({ length: 4 }).map((_, i) => (
+          <div className="border-primary-blue mt-8 grid place-items-center gap-x-4 gap-y-8 border-b pb-4 md:grid-cols-2 md:place-items-start lg:grid-cols-5">
+            {Array.from({ length: 5 }).map((_, i) => (
               <div
                 key={i}
                 className={cn('cursor-pointer border border-transparent p-2', {
@@ -483,7 +486,7 @@ const PoweredByTech = () => {
                 <div key={i}>
                   <div>
                     <Image
-                      src={`/images/Janastic/Untitled-1-${i === 9 ? `10` : `0${i + 1}`}.jpg`}
+                      src={`/images/cong_trinh/1-${i === 9 ? `10` : `0${i + 1}`}.png`}
                       width={400}
                       height={400}
                       alt="Janastic"
@@ -527,6 +530,16 @@ const PoweredByTech = () => {
                     <p className="text-lg font-semibold">{name}</p>
                     <p className="font-i-ciel-gotham font-medium">Model: {model}</p>
                     <ul className="mt-2 ml-5 list-disc">{details?.map((item, idx) => <li key={idx}>{item}</li>)}</ul>
+                  </div>
+                </div>
+              ))}
+
+
+            {index === 4 &&
+              Array.from({ length: 7 }).map((_, i) => (
+                <div key={i} className="space-y-4 bg-white p-4">
+                  <div>
+                    <Image src={`/images/IGUS/sp-0${i + 1}.png`} width={400} height={400} alt="CutFlex" />
                   </div>
                 </div>
               ))}

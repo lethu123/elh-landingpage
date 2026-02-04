@@ -25,8 +25,8 @@ const About = () => {
             </div>
           </div>
 
-          <div>
-            <svg width={253} height={85} viewBox="0 0 253 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <div style={{ width: 253, height: 85 }}>
+            {/* <svg width={253} height={85} viewBox="0 0 253 85" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g filter="url(#filter0_d_2141_198)">
                 <path d="M248.5 0.300049H4.40002V76.8L248.5 0.300049Z" fill="#1C3051" />
                 <path d="M245.231 0.800049L4.90002 76.1184V0.800049H245.231Z" stroke="black" />
@@ -56,7 +56,7 @@ const About = () => {
                   <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2141_198" result="shape" />
                 </filter>
               </defs>
-            </svg>
+            </svg> */}
           </div>
           <div className="my-16 grid place-items-center lg:mt-32 2xl:-mb-12 2xl:grid-cols-6">
             <div className="lg:col-span-2 lg:col-start-2">
