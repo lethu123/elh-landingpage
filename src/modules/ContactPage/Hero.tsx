@@ -206,6 +206,9 @@ const Hero = () => {
                   <Image src={`/images/about/brand-${i + 1}.svg`} width={315} height={61} alt="" />
                 </div>
               ))}
+              <div className="pt-1">
+                <Image src={`/images/about/brand-5.png`} width={315} height={61} alt="" />
+              </div>
             </div>
           </div>
         </div>

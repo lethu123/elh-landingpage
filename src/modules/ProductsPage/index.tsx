@@ -158,11 +158,14 @@ const ProductsPage = ({ slug }: { slug: string }) => {
             <p className="font-semibold uppercase">Danh mục sản phẩm hãng sản xuất</p>
             <div className="bg-primary-blue my-4 h-px w-full" />
             <div className="space-y-8 pt-6">
-              {Array.from({ length: 4 }).map((_, i) => (
+              {Array.from({ length: 3 }).map((_, i) => (
                 <div key={i}>
                   <Image src={`/images/about/brand-${i + 1}.svg`} width={315} height={61} alt="" />
                 </div>
               ))}
+              <div>
+                <Image src={`/images/about/brand-5.png`} width={315} height={61} alt="" />
+              </div>
             </div>
           </div>
         </div>

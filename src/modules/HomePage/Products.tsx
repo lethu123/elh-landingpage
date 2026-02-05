@@ -13,48 +13,48 @@ const Products = () => {
   const nextRef1 = useRef(null)
   const prevRef2 = useRef(null)
   const nextRef2 = useRef(null)
-  const data1 = [
-    {
-      image: '/images/xylem6.jpg',
-      name: 'Lowara e-IXP',
-      model: 'e-IXP',
-    },
-    {
-      image: '/images/xylem4.jpg',
-      name: 'Lowara TLCN, TLCHN',
-      model: 'TLCN, TLCHN',
-    },
-    {
-      image: '/images/xylem3.jpg',
-      name: 'Lowara Ecocirc+',
-      model: 'Ecocirc+',
-    },
-    {
-      image: '/images/xylem2.jpg',
-      name: 'Lowara SHO',
-      model: 'SHO',
-    },
-    {
-      image: '/images/anel4.jpg',
-      name: 'GRACO 1250A6 HUSKY 205 PVDF 1/4″ 19 L/min Diaphragm Pump PP NULL PVDF SP (NPT)',
-      model: 'GRACO D150A6',
-    },
-    {
-      image: '/images/anel3.jpg',
-      name: 'GRACO 647671 HUSKY 1050 Aluminum 1′ 189 L/min Diaphragm Pump A01 A A2 BN BN BN – (BSP)',
-      model: 'GRACO 647671',
-    },
-    {
-      image: '/images/anel2.jpg',
-      name: 'GRACO 649034 HUSKY 1050 Polypropylene 1′ 189 L/min Diaphragm Pump',
-      model: 'GRACO 649034',
-    },
-    {
-      image: '/images/anel1.jpg',
-      name: 'GRACO D52911 HUSKY 515 Polypropylene 1/2″ 57L/min Diaphragm Pump',
-      model: 'GRACO D52911',
-    },
-  ]
+  // const data1 = [
+  //   {
+  //     image: '/images/xylem6.jpg',
+  //     name: 'Lowara e-IXP',
+  //     model: 'e-IXP',
+  //   },
+  //   {
+  //     image: '/images/xylem4.jpg',
+  //     name: 'Lowara TLCN, TLCHN',
+  //     model: 'TLCN, TLCHN',
+  //   },
+  //   {
+  //     image: '/images/xylem3.jpg',
+  //     name: 'Lowara Ecocirc+',
+  //     model: 'Ecocirc+',
+  //   },
+  //   {
+  //     image: '/images/xylem2.jpg',
+  //     name: 'Lowara SHO',
+  //     model: 'SHO',
+  //   },
+  //   {
+  //     image: '/images/anel4.jpg',
+  //     name: 'GRACO 1250A6 HUSKY 205 PVDF 1/4″ 19 L/min Diaphragm Pump PP NULL PVDF SP (NPT)',
+  //     model: 'GRACO D150A6',
+  //   },
+  //   {
+  //     image: '/images/anel3.jpg',
+  //     name: 'GRACO 647671 HUSKY 1050 Aluminum 1′ 189 L/min Diaphragm Pump A01 A A2 BN BN BN – (BSP)',
+  //     model: 'GRACO 647671',
+  //   },
+  //   {
+  //     image: '/images/anel2.jpg',
+  //     name: 'GRACO 649034 HUSKY 1050 Polypropylene 1′ 189 L/min Diaphragm Pump',
+  //     model: 'GRACO 649034',
+  //   },
+  //   {
+  //     image: '/images/anel1.jpg',
+  //     name: 'GRACO D52911 HUSKY 515 Polypropylene 1/2″ 57L/min Diaphragm Pump',
+  //     model: 'GRACO D52911',
+  //   },
+  // ]
 
   const data2 = [
     {
@@ -95,10 +95,10 @@ const Products = () => {
     <div className="mt-16 space-y-16">
       <Container>
         <div className="items-center space-y-2 gap-x-2 lg:flex lg:space-y-0">
-          <p className="shrink-0 text-xl font-semibold uppercase">Van, Bơm</p>
+          <p className="shrink-0 text-xl font-semibold uppercase">Khách hàng thân thiết </p>
           <div className="bg-primary-blue mt-1.5 hidden h-px w-full lg:block" />
           <div className="flex shrink-0 flex-wrap items-center gap-2">
-            <p>Grundfos | Alfa Laval | XYLEM | Parker |</p>
+            <p>Posco | Intermalt | Kenda | ChengLong |</p>
             <button className="text-primary-orange uppercase">Xem tất cả</button>
           </div>
         </div>
@@ -147,7 +147,7 @@ const Products = () => {
                 spaceBetween: 40,
               },
               1280: {
-                slidesPerView: 4,
+                slidesPerView: 5,
                 spaceBetween: 50,
               },
             }}
@@ -165,21 +165,24 @@ const Products = () => {
             }}
             modules={[Navigation]}
           >
-            {data1.map(({ image, name, model }, i) => (
-              <SwiperSlide key={model + i}>
-                <div className="hover:border-primary-orange relative grid min-h-[350px] place-items-center rounded-2xl border border-white bg-white p-4 transition-all duration-300">
-                  {i === 0 && (
+            {Array.from({ length: 36 }).map((image, i) => (
+              <SwiperSlide key={i}>
+                <div className="hover:border-primary-orange relative grid min-h-[300px] place-items-center rounded-2xl border border-white bg-white p-4 transition-all duration-300">
+                  {/* {i === 0 && (
                     <div className="absolute top-4 left-4">
                       <Image src="/images/baohanh.png" width={100} height={100} alt="" />
                     </div>
-                  )}
+                  )} */}
 
-                  <div className="flex h-full flex-col">
+                  <div className="flex flex-col">
                     <div className="mx-auto w-fit">
-                      <Image src={image} width={217} height={230} alt={model} />
+                      <Image
+                        src={`/images/KHTT/logo-${i > 8 ? `${i + 1}` : `0${i + 1}`}.png`}
+                        width={217}
+                        height={230}
+                        alt={''}
+                      />
                     </div>
-                    <p className="flex-1 text-center">{name}</p>
-                    <p className="text-primary-orange text-center text-sm">Mã SP: {model}</p>
                   </div>
                 </div>
               </SwiperSlide>
@@ -190,12 +193,12 @@ const Products = () => {
 
       <Container>
         <div className="items-center space-y-2 gap-x-2 lg:flex lg:space-y-0">
-          <p className="shrink-0 text-xl font-semibold uppercase">Cảm biến</p>
+          <p className="shrink-0 text-xl font-semibold uppercase">Chứng chỉ</p>
           <div className="bg-primary-blue mt-1.5 hidden h-px w-full lg:block" />
-          <div className="flex shrink-0 flex-wrap items-center gap-2">
+          {/* <div className="flex shrink-0 flex-wrap items-center gap-2">
             <p>Tempco | ABB | Landz | Omron | Keyence |</p>
             <button className="text-primary-orange uppercase">Xem tất cả</button>
-          </div>
+          </div> */}
         </div>
 
         <div className="mt-8">
@@ -242,7 +245,7 @@ const Products = () => {
                 spaceBetween: 40,
               },
               1280: {
-                slidesPerView: 4,
+                slidesPerView: 5,
                 spaceBetween: 50,
               },
             }}
@@ -260,20 +263,19 @@ const Products = () => {
             }}
             modules={[Navigation]}
           >
-            {data2.map(({ name, model }, i) => (
-              <SwiperSlide key={model + i}>
+            {Array.from({ length: 5 }).map((image, i) => (
+              <SwiperSlide key={i}>
                 <div className="hover:border-primary-orange relative grid min-h-[350px] place-items-center rounded-2xl border border-white bg-white p-4 transition-all duration-300">
-                  {i === 0 && (
-                    <div className="absolute top-4 left-4">
-                      <Image src="/images/baohanh.png" width={100} height={100} alt="" />
+                  <div className="flex w-full flex-col">
+                    <div className="mx-auto w-full">
+                      <Image
+                        className="w-full"
+                        src={`/images/certificate/cer-0${i + 1}.jpg`}
+                        width={217}
+                        height={230}
+                        alt={''}
+                      />
                     </div>
-                  )}
-                  <div className="flex h-full flex-col">
-                    <div className="mx-auto w-fit">
-                      <Image src={`/images/cambien${i + 2}.jpg`} width={217} height={230} alt={model} />
-                    </div>
-                    <p className="flex-1 text-center">{name}</p>
-                    <p className="text-primary-orange text-center text-sm">Mã SP: {model}</p>
                   </div>
                 </div>
               </SwiperSlide>

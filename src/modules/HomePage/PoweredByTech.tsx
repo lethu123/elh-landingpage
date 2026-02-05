@@ -421,9 +421,6 @@ export const meihe = [
   },
 ]
 
-
-
-
 const PoweredByTech = () => {
   const router = useRouter()
   const searchParams = useSearchParams()
@@ -484,12 +481,13 @@ const PoweredByTech = () => {
             {index === 0 &&
               Array.from({ length: 10 }).map((_, i) => (
                 <div key={i}>
-                  <div>
+                  <div className="h-full">
                     <Image
                       src={`/images/cong_trinh/1-${i === 9 ? `10` : `0${i + 1}`}.png`}
                       width={400}
                       height={400}
                       alt="Janastic"
+                      className="h-full"
                     />
                   </div>
                 </div>
@@ -502,7 +500,11 @@ const PoweredByTech = () => {
                   </div>
                   <div>
                     <p className="text-lg font-semibold">{name}</p>
-                    <ul className="mt-2 ml-5 list-disc">{details?.map((item, idx) => <li key={idx}>{item}</li>)}</ul>
+                    <ul className="mt-2 ml-5 list-disc">
+                      {details?.map((item, idx) => (
+                        <li key={idx}>{item}</li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               ))}
@@ -515,7 +517,9 @@ const PoweredByTech = () => {
                   <div>
                     <p className="text-lg font-semibold">{cutflex[i]?.title}</p>
                     <ul className="mt-2 ml-5 list-disc">
-                      {cutflex[i]?.info?.map((item, idx) => <li key={idx}>{item}</li>)}
+                      {cutflex[i]?.info?.map((item, idx) => (
+                        <li key={idx}>{item}</li>
+                      ))}
                     </ul>
                   </div>
                 </div>
@@ -529,14 +533,17 @@ const PoweredByTech = () => {
                   <div>
                     <p className="text-lg font-semibold">{name}</p>
                     <p className="font-i-ciel-gotham font-medium">Model: {model}</p>
-                    <ul className="mt-2 ml-5 list-disc">{details?.map((item, idx) => <li key={idx}>{item}</li>)}</ul>
+                    <ul className="mt-2 ml-5 list-disc">
+                      {details?.map((item, idx) => (
+                        <li key={idx}>{item}</li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               ))}
 
-
             {index === 4 &&
-              Array.from({ length: 7 }).map((_, i) => (
+              Array.from({ length: 6 }).map((_, i) => (
                 <div key={i} className="space-y-4 bg-white p-4">
                   <div>
                     <Image src={`/images/IGUS/sp-0${i + 1}.png`} width={400} height={400} alt="CutFlex" />
@@ -549,7 +556,7 @@ const PoweredByTech = () => {
             <button
               onClick={() =>
                 router.push(
-                  `/catalog/?product=${index === 0 ? 'janastic' : index === 1 ? 'tempco' : index === 2 ? 'cutflex' : 'meihe'}`,
+                  `/catalog/?product=${index === 0 ? 'janastic' : index === 1 ? 'tempco' : index === 2 ? 'cutflex' : index === 3 ? 'meihe' : 'igus'}`,
                 )
               }
               className="bg-primary-blue hover:bg-primary-blue/90 rounded-lg px-4 py-2 text-white"
