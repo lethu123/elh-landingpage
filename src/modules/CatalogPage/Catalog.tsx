@@ -20,6 +20,7 @@ const Catalog = () => {
     if (params === 'tempco') return 1
     if (params === 'cutflex') return 2
     if (params === 'meihe') return 3
+    if (params === 'igus') return 4
     return 0
   }
   const [index, setIndex] = useState<number>(convertIndex(params))
@@ -47,6 +48,11 @@ const Catalog = () => {
       text: 'Meihe',
       img: '/images/about/brand-4.svg',
       document: '/documents/meihe.pdf',
+    },
+    {
+      text: 'Igus',
+      img: '/images/about/brand-5.png',
+      document: '/documents/igus.pdf',
     },
     {
       text: '2018 INT 124P MENNEKES Catalog',
@@ -78,7 +84,7 @@ const Catalog = () => {
       <Container>
         <div className="mt-10 mb-32 flex flex-col-reverse gap-20 space-y-6 xl:grid xl:grid-cols-6 xl:space-y-0">
           <div className="space-y-8 xl:col-span-4">
-            <div className="gap-10 space-y-4 md:grid md:grid-cols-2 md:space-y-0 xl:grid-cols-3 items-stretch">
+            <div className="items-stretch gap-10 space-y-4 md:grid md:grid-cols-2 md:space-y-0 xl:grid-cols-3">
               {index === 0 &&
                 Array.from({ length: 25 }).map((_, i) => (
                   <div key={i}>
@@ -88,7 +94,7 @@ const Catalog = () => {
                         width={400}
                         height={400}
                         alt="Janastic"
-                        className='h-full w-full object-cover'
+                        className="h-full w-full object-cover"
                       />
                     </div>
                   </div>
@@ -101,7 +107,11 @@ const Catalog = () => {
                     </div>
                     <div>
                       <p className="text-lg font-semibold">{name}</p>
-                      <ul className="mt-2 ml-5 list-disc">{details?.map((item, idx) => <li key={idx}>{item}</li>)}</ul>
+                      <ul className="mt-2 ml-5 list-disc">
+                        {details?.map((item, idx) => (
+                          <li key={idx}>{item}</li>
+                        ))}
+                      </ul>
                     </div>
                   </div>
                 ))}
@@ -114,7 +124,9 @@ const Catalog = () => {
                     <div>
                       <p className="text-lg font-semibold">{cutflex[i]?.title}</p>
                       <ul className="mt-2 ml-5 list-disc">
-                        {cutflex[i]?.info?.map((item, idx) => <li key={idx}>{item}</li>)}
+                        {cutflex[i]?.info?.map((item, idx) => (
+                          <li key={idx}>{item}</li>
+                        ))}
                       </ul>
                     </div>
                   </div>
@@ -128,7 +140,11 @@ const Catalog = () => {
                     <div>
                       <p className="text-lg font-semibold">{name}</p>
                       <p className="font-i-ciel-gotham font-medium">Model: {model}</p>
-                      <ul className="mt-2 ml-5 list-disc">{details?.map((item, idx) => <li key={idx}>{item}</li>)}</ul>
+                      <ul className="mt-2 ml-5 list-disc">
+                        {details?.map((item, idx) => (
+                          <li key={idx}>{item}</li>
+                        ))}
+                      </ul>
                     </div>
                   </div>
                 ))}
@@ -142,7 +158,7 @@ const Catalog = () => {
                         width={400}
                         height={400}
                         alt="Janastic"
-                        className='h-full w-full object-cover'
+                        className="h-full w-full object-cover"
                       />
                     </div>
                   </div>
@@ -153,7 +169,7 @@ const Catalog = () => {
             <p className="font-semibold uppercase">Danh mục sản phẩm hãng sản xuất</p>
             <div className="bg-primary-blue my-4 h-px w-full" />
             <div className="space-y-8 pt-6">
-              {Array.from({ length: 5 }).map((_, i) => (
+              {Array.from({ length: 3 }).map((_, i) => (
                 <div
                   key={i}
                   className={cn('cursor-pointer border border-transparent p-2', {
@@ -164,6 +180,14 @@ const Catalog = () => {
                   <Image src={`/images/about/brand-${i + 1}.svg`} width={315} height={61} alt="" />
                 </div>
               ))}
+              <div
+                className={cn('cursor-pointer border border-transparent p-2', {
+                  'border-primary-orange rounded-lg': index === 4,
+                })}
+                onClick={() => setIndex(4)}
+              >
+                <Image src={`/images/about/brand-5.png`} width={315} height={61} alt="" />
+              </div>
             </div>
           </div>
         </div>
@@ -173,8 +197,8 @@ const Catalog = () => {
           <div className="bg-primary-blue mt-1.5 h-px w-full" />
         </div>
 
-        <div className="border-primary-blue/50 grid gap-x-10 gap-y-6 border-b pb-16 md:grid-cols-2 xl:grid-cols-4">
-          {data.slice(0, 4).map(({ text, document, img }, i) => (
+        <div className="border-primary-blue/50 grid gap-x-10 gap-y-6 border-b pb-16 md:grid-cols-2 xl:grid-cols-5">
+          {data.slice(0, 5).map(({ text, document, img }, i) => (
             <div key={i} className="space-y-3">
               <div className="h-32 w-full bg-[#ebebeb] p-4">
                 <Image src={img} width={729} height={510} alt="Catalog" />
@@ -192,7 +216,7 @@ const Catalog = () => {
         </div>
 
         <div className="grid gap-x-16 gap-y-6 pt-12 pb-16 md:grid-cols-2 xl:grid-cols-3">
-          {data.slice(4, data.length).map(({ text, img }, i) => (
+          {data.slice(5, data.length).map(({ text, img }, i) => (
             <div key={i} className="space-y-3">
               <div className="w-full">
                 <Image src={img} width={729} height={510} alt="Catalog" />
