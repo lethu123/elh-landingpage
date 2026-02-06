@@ -7,7 +7,6 @@ import { useRouter, useSearchParams } from 'next/navigation'
 
 import Container from '@/components/Container'
 import { cn } from '@/lib/utils'
-import { Constraction } from './Constraction'
 
 export const cutflex = [
   {

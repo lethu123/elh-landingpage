@@ -7,7 +7,6 @@ import { useRouter, useSearchParams } from 'next/navigation'
 
 import Container from '@/components/Container'
 import { cn } from '@/lib/utils'
-import { Constraction } from './Constraction'
 
 export const cutflex = [
   {
@@ -508,7 +507,7 @@ const PoweredByTech = () => {
                 </div>
               ))}
             {index === 1 &&
-              tempco.slice(0, 4).map(({ details, name, img }, i) => (
+              tempco.map(({ details, name, img }, i) => (
                 <div key={i} className="space-y-4 bg-white p-4">
                   <div>
                     <Image src={img || ''} width={400} height={400} alt="Tempco" />
@@ -580,8 +579,6 @@ const PoweredByTech = () => {
             </button>
           </div>
         </div>
-
-        <Constraction />
 
         <div className="mt-16 space-y-8">
           <div className="flex items-center justify-end gap-x-4">

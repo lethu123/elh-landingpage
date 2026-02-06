@@ -7,7 +7,6 @@ import { useRouter, useSearchParams } from 'next/navigation'
 
 import Container from '@/components/Container'
 import { cn } from '@/lib/utils'
-import { Constraction } from './Constraction'
 
 export const cutflex = [
   {
@@ -580,8 +579,6 @@ const PoweredByTech = () => {
             </button>
           </div>
         </div>
-
-        <Constraction />
 
         <div className="mt-16 space-y-8">
           <div className="flex items-center justify-end gap-x-4">

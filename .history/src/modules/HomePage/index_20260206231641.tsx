@@ -24,8 +24,8 @@ const HomePage = () => {
         </Marquee>
       </div>
       <About />
+      <Constraction />
       <PoweredByTech />
-
       <Products />
       <Service />
       <Contact />

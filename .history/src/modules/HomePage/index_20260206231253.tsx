@@ -25,7 +25,7 @@ const HomePage = () => {
       </div>
       <About />
       <PoweredByTech />
-
+      <Constraction />
       <Products />
       <Service />
       <Contact />

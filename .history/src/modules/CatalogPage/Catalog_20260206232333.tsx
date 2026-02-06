@@ -86,11 +86,11 @@ const Catalog = () => {
           <div className="space-y-8 xl:col-span-4">
             <div className="items-stretch gap-10 space-y-4 md:grid md:grid-cols-2 md:space-y-0 xl:grid-cols-3">
               {index === 0 &&
-                Array.from({ length: 10 }).map((_, i) => (
+                Array.from({ length: 25 }).map((_, i) => (
                   <div key={i}>
                     <div className="h-full">
                       <Image
-                        src={`/images/Janastic/Untitled-1-${i > 8 ? `${i + 1}.jpg` : `0${i + 1}.jpg`}`}
+                        src={`/images/Janastic/Untitled-1-${i > 8 ? `${i + 1}.png` : `0${i + 1}.png`}`}
                         width={400}
                         height={400}
                         alt="Janastic"
@@ -169,7 +169,7 @@ const Catalog = () => {
             <p className="font-semibold uppercase">Danh mục sản phẩm hãng sản xuất</p>
             <div className="bg-primary-blue my-4 h-px w-full" />
             <div className="space-y-8 pt-6">
-              {Array.from({ length: 4 }).map((_, i) => (
+              {Array.from({ length: 3 }).map((_, i) => (
                 <div
                   key={i}
                   className={cn('cursor-pointer border border-transparent p-2', {
@@ -182,9 +182,9 @@ const Catalog = () => {
               ))}
               <div
                 className={cn('cursor-pointer border border-transparent p-2', {
-                  'border-primary-orange rounded-lg': index === 5,
+                  'border-primary-orange rounded-lg': index === 4,
                 })}
-                onClick={() => setIndex(5)}
+                onClick={() => setIndex(4)}
               >
                 <Image src={`/images/about/brand-5.png`} width={315} height={61} alt="" />
               </div>

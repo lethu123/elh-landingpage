@@ -8,7 +8,6 @@ import PoweredByTech from './PoweredByTech'
 import Products from './Products'
 import Service from './Service'
 import Contact from './Contact'
-import { Constraction } from './Constraction'
 
 const HomePage = () => {
   return (
@@ -25,7 +24,6 @@ const HomePage = () => {
       </div>
       <About />
       <PoweredByTech />
-
       <Products />
       <Service />
       <Contact />
