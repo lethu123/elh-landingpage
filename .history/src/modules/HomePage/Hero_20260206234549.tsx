@@ -16,7 +16,7 @@ const Hero = () => {
   return (
     <Container className="px-0">
       <Swiper
-        // grabCursor={true}
+        grabCursor={true}
         effect={'creative'}
         loop
         autoplay
