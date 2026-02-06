@@ -60,12 +60,12 @@ const Hero = () => {
                       <Image src="/icons/map.svg" width={15} height={15} alt="Map" />
                     </div>
                     <Link
-                      href="https://maps.app.goo.gl/Bfk51u4gX9vk5tX8A"
+                      href="https://maps.app.goo.gl/KfEqBb92V8Lw7eJ6A"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="block"
                     >
-                      Địa chỉ: 23/3a Đường TTH21, Phường Tân Thới Hiệp, TP.HCM
+                      Địa chỉ: 24 Nguyễn Thị Căn, Khu Phố 2, Phường Tân Thới Hiệp, Quận 12, TP.HCM
                     </Link>
                   </div>
                   <div className="flex items-center gap-x-4">
@@ -186,7 +186,7 @@ const Hero = () => {
               </div>
               <div>
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.340807743716!2d106.6423876759785!3d10.861662157613834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529ec384211b7%3A0xdcaa7467b51e4f3b!2zMjMvM0EgxJAuIFRUSDIxLCBUw6JuIFRo4bubaSBIaeG7h3AsIFF14bqtbiAxMiwgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oLCBWaWV0bmFt!5e0!3m2!1sen!2s!4v1770395419123!5m2!1sen!2s"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.360274973992!2d106.6443202!3d10.860178500000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529ecf8dfbb8d%3A0xe79c528163e5f99e!2zMjQgTmd1eeG7hW4gVGjhu4sgQ8SDbiwgVMOibiBUaOG7m2kgSGnhu4dwLCBRdeG6rW4gMTIsIEjhu5MgQ2jDrSBNaW5oIDcxNTAw!5e0!3m2!1sen!2s!4v1750409501082!5m2!1sen!2s"
                   width={'100%'}
                   height={'100%'}
                   className="h-[200px] w-full border-0 xl:h-96 xl:w-11/12"
@@ -194,8 +194,6 @@ const Hero = () => {
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                 />
-
-
               </div>
             </div>
           </div>

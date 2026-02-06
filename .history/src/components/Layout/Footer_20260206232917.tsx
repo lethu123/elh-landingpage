@@ -47,7 +47,7 @@ const Footer = () => {
                     <Image src="/icons/map.svg" width={15} height={15} alt="Map" />
                   </div>
                   <Link
-                    href="https://maps.app.goo.gl/Bfk51u4gX9vk5tX8A"
+                    href="https://maps.app.goo.gl/KfEqBb92V8Lw7eJ6A"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block"

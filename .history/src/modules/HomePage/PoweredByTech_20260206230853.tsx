@@ -7,7 +7,6 @@ import { useRouter, useSearchParams } from 'next/navigation'
 
 import Container from '@/components/Container'
 import { cn } from '@/lib/utils'
-import { Constraction } from './Constraction'
 
 export const cutflex = [
   {
@@ -508,7 +507,7 @@ const PoweredByTech = () => {
                 </div>
               ))}
             {index === 1 &&
-              tempco.slice(0, 4).map(({ details, name, img }, i) => (
+              tempco.map(({ details, name, img }, i) => (
                 <div key={i} className="space-y-4 bg-white p-4">
                   <div>
                     <Image src={img || ''} width={400} height={400} alt="Tempco" />
@@ -524,7 +523,7 @@ const PoweredByTech = () => {
                 </div>
               ))}
             {index === 2 &&
-              Array.from({ length: 4 }).map((_, i) => (
+              Array.from({ length: 7 }).map((_, i) => (
                 <div key={i} className="space-y-4 bg-white p-4">
                   <div>
                     <Image src={`/images/CutFlex/sp-web-elh-0${i + 1}.jpg`} width={400} height={400} alt="CutFlex" />
@@ -540,7 +539,7 @@ const PoweredByTech = () => {
                 </div>
               ))}
             {index === 3 &&
-              meihe.slice(0, 4).map(({ details, img, model, name }, i) => (
+              meihe.slice(0, 10).map(({ details, img, model, name }, i) => (
                 <div key={i} className="space-y-4 bg-white p-4">
                   <div>
                     <Image src={img} width={400} height={400} alt="Meihe" />
@@ -558,7 +557,7 @@ const PoweredByTech = () => {
               ))}
 
             {index === 4 &&
-              Array.from({ length: 4 }).map((_, i) => (
+              Array.from({ length: 6 }).map((_, i) => (
                 <div key={i} className="space-y-4 bg-white p-4">
                   <div>
                     <Image src={`/images/IGUS/sp-0${i + 1}.png`} width={400} height={400} alt="CutFlex" />
@@ -580,8 +579,6 @@ const PoweredByTech = () => {
             </button>
           </div>
         </div>
-
-        <Constraction />
 
         <div className="mt-16 space-y-8">
           <div className="flex items-center justify-end gap-x-4">

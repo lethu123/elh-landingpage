@@ -169,7 +169,7 @@ const Catalog = () => {
             <p className="font-semibold uppercase">Danh mục sản phẩm hãng sản xuất</p>
             <div className="bg-primary-blue my-4 h-px w-full" />
             <div className="space-y-8 pt-6">
-              {Array.from({ length: 4 }).map((_, i) => (
+              {Array.from({ length: 3 }).map((_, i) => (
                 <div
                   key={i}
                   className={cn('cursor-pointer border border-transparent p-2', {
@@ -182,9 +182,9 @@ const Catalog = () => {
               ))}
               <div
                 className={cn('cursor-pointer border border-transparent p-2', {
-                  'border-primary-orange rounded-lg': index === 5,
+                  'border-primary-orange rounded-lg': index === 4,
                 })}
-                onClick={() => setIndex(5)}
+                onClick={() => setIndex(4)}
               >
                 <Image src={`/images/about/brand-5.png`} width={315} height={61} alt="" />
               </div>

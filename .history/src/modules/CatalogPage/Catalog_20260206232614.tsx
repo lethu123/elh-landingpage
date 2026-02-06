@@ -182,7 +182,7 @@ const Catalog = () => {
               ))}
               <div
                 className={cn('cursor-pointer border border-transparent p-2', {
-                  'border-primary-orange rounded-lg': index === 5,
+                  'border-primary-orange rounded-lg': index === 4,
                 })}
                 onClick={() => setIndex(5)}
               >
