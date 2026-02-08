@@ -3,7 +3,7 @@
 import { useRef } from 'react'
 
 import Image from 'next/image'
-import { Navigation } from 'swiper/modules'
+import { Autoplay, EffectCreative, Navigation } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 import Container from '@/components/Container'
@@ -237,8 +237,11 @@ const Products = () => {
             </button>
           </div>
           <Swiper
-            spaceBetween={20}
+            // spaceBetween={20}
             slidesPerView={1}
+            autoplay={{ delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true }}
+            loop
+            modules={[EffectCreative, Navigation, Autoplay]}
             breakpoints={{
               768: {
                 slidesPerView: 3,
@@ -261,15 +264,15 @@ const Products = () => {
               swiper.navigation.init()
               swiper.navigation.update()
             }}
-            modules={[Navigation]}
+            className="items-stretch!"
           >
-            {Array.from({ length: 5 }).map((image, i) => (
-              <SwiperSlide key={i}>
-                <div className="hover:border-primary-orange relative grid min-h-[350px] place-items-center rounded-2xl border border-white bg-white p-4 transition-all duration-300">
+            {Array.from({ length: 8 }).map((image, i) => (
+              <SwiperSlide key={i} className="h-full">
+                <div className="hover:border-primary-orange relative grid min-h-[350px] place-items-center rounded-2xl border border-white bg-white p-4 transition-all duration-300 lg:min-h-[425px]">
                   <div className="flex w-full flex-col">
                     <div className="mx-auto w-full">
                       <Image
-                        className="w-full"
+                        className="h-full w-full"
                         src={`/images/certificate/cer-0${i + 1}.jpg`}
                         width={217}
                         height={230}
