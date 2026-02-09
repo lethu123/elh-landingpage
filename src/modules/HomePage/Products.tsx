@@ -266,7 +266,7 @@ const Products = () => {
             }}
             className="items-stretch!"
           >
-            {Array.from({ length: 8 }).map((image, i) => (
+            {Array.from({ length: 10 }).map((image, i) => (
               <SwiperSlide key={i} className="h-full">
                 <div className="hover:border-primary-orange relative grid min-h-[350px] place-items-center rounded-2xl border border-white bg-white p-4 transition-all duration-300 lg:min-h-[425px]">
                   <div className="flex w-full flex-col">
